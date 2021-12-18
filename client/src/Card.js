@@ -7,7 +7,7 @@ import Popup from './Popup';
 import axios from 'axios';
 
 
-// For real time
+
 import io from 'socket.io-client'
 const socket = io('http://localhost:5000/');
 
@@ -29,14 +29,14 @@ const Card = ({ type, user, setUsers, allusers }) => {
         })
     }
 
-    
+
 
     return (
         <div>
             {
-                popup && <Popup setPopup={setPopup} 
-                user={cardUser} setUsers={setUsers} 
-                setCardUser={setCardUser}/>
+                popup && <Popup setPopup={setPopup}
+                    user={cardUser} setUsers={setUsers}
+                    setCardUser={setCardUser} />
             }
             {(type === 'card') ? (
                 <div className="cards">
@@ -59,11 +59,11 @@ const Card = ({ type, user, setUsers, allusers }) => {
                     </div>
                 </div>
             ) : (
-                    <div className="addcards"
-                        onClick={() => setPopup(true)}>
-                        <AddCircleOutlineIcon />
-                    </div>
-                )}
+                <div className="addcards"
+                    onClick={() => setPopup(true)}>
+                    <AddCircleOutlineIcon />
+                </div>
+            )}
 
 
         </div>

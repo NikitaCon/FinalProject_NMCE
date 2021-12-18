@@ -1,7 +1,6 @@
 import mongoose from 'mongoose'
 
 
-// Now create a Schema
 
 const UserSchema = new mongoose.Schema({
     name: {
@@ -24,7 +23,7 @@ const UserSchema = new mongoose.Schema({
 
 
 
-// Now create a model
+
 
 const User = mongoose.model("users", UserSchema);
 
